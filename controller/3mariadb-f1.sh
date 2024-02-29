@@ -1,3 +1,6 @@
+#https://www.server-world.info/en/note?os=Ubuntu_22.04&p=mariadb
+
+
 show grants for root@localhost; 
 select user,host,password from mysql.user; 
 show databases;

@@ -1,10 +1,11 @@
 ## execute  all therse comannds as root
+## https://www.server-world.info/en/note?os=Ubuntu_22.04&p=openstack_antelope&f=2
 apt -y install software-properties-common
 add-apt-repository cloud-archive:antelope
 apt update
 apt upgrade -y
 apt -y install rabbitmq-server memcached python3-pymysql nginx libnginx-mod-stream
-echo -e "adding user RabbitMQ\n"
+echo -e " \n adding user RabbitMQ\n"
 rabbitmqctl add_user openstack password
 echo -e "setting permission for rabbitmctl\n"
 rabbitmqctl set_permissions openstack ".*" ".*" ".*"

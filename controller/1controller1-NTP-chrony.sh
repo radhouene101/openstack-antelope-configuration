@@ -1,3 +1,4 @@
+#https://www.server-world.info/en/note?os=Ubuntu_22.04&p=ntp&f=3
  apt -y install chrony
  echo -e " next command is vi /etc/chrony/chrony.conf"
  echo -e "# line 20 : comment out default settings and add NTP Servers for your timezone\n #pool ntp.ubuntu.com        iburst maxsources 4\n#pool 0.ubuntu.pool.ntp.org iburst maxsources 1\n#pool 1.ubuntu.pool.ntp.org iburst maxsources 1\n#pool 2.ubuntu.pool.ntp.org iburst maxsources 2\npool ntp.nict.jp iburst"
