@@ -8,7 +8,7 @@ cat keystone_conf-1.sh
 
 echo -e "\n press any key to continue \n"
 
-cat 5.2keystone_conf-1.sh
+cat 5_2keystone_conf-1.sh
 
 read -n 1 -r
 
