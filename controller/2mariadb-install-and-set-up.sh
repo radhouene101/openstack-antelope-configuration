@@ -13,4 +13,5 @@ mysql_secure_installation
 echo -e "you-re back\n"
 mysql
 echo " #finished--radhouene" >> ~/OPENSTACK-ANTELOPE-CONF/controller/2mariadb-install-and-set-up.sh
+echo "test ahmed" 
 
