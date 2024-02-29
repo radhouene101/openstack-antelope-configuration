@@ -16,7 +16,8 @@ nano  /etc/keystone/keystone.conf
 
 echo -e "\n populating database \n"
 su -s /bin/bash keystone -c "keystone-manage db_sync"
-keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone 
+
 keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
 export controller=192.168.1.11
 
