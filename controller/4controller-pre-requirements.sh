@@ -17,5 +17,6 @@ nano /etc/mysql/mariadb.conf.d/50-server.cnf
 echo -e "\n"
 echo -e "\n then we will change /etc/memcached.conf\n"
 echo -e "# line 35 : change to the IP address memcached listens \n if listen all, specify [0.0.0.0] \n -l 10.0.0.30 \n"
+nano -l /etc/memcached
 unlink /etc/nginx/sites-enabled/default
 systemctl restart mariadb rabbitmq-server memcached nginx

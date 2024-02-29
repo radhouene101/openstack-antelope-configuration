@@ -1,3 +1,4 @@
+#https://www.server-world.info/en/note?os=Ubuntu_22.04&p=openstack_antelope&f=5
 openstack user create --domain default --project service --password servicepassword glance
 openstack role add --project service --user glance admin
 openstack service create --name glance --description "OpenStack Image service" image
