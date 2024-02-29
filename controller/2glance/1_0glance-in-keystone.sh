@@ -6,3 +6,18 @@ openstack endpoint create --region RegionOne image public https://$controller:92
 openstack endpoint create --region RegionOne image internal https://$controller:9292
 openstack endpoint create --region RegionOne image admin https://$controller:9292
 mysql
+
+apt -y install glance
+#mv /etc/glance/glance-api.conf /etc/glance/glance-api.conf.org
+echo -e " \n configuring glance-api.conf \n"
+read -n 1 -r
+cp glance-api-conf /etc/glance/glance.-api.conf
+
+echo -e "\n ensuring ownership \n"
+chmod 640 /etc/glance/glance-api.conf
+chown root:glance /etc/glance/glance-api.conf
+su -s /bin/bash glance -c "glance-manage db_sync"
+systemctl restart glance-api
+systemctl enable glance-api
+nginx.conf >> /etc/nginx/nginx.conf
+systemctl restart nginx
